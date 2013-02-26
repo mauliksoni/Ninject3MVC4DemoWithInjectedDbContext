@@ -27,6 +27,13 @@ namespace NinjectMVC4Demo.Controllers
             ViewBag.Message2 = _dbTestService.dbTest().ToString();
             return View();
         }
+        
+        public ActionResult Home()
+        {
+            ViewBag.Message= _testService.HelloWorld();
+            ViewBag.Message2= _dbTestService.dbTest().ToString();
+            return view();
+        }
 
     }
 }
